@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lớp Mô Tả Hình Chữ Nhật</title>
+</head>
+<body>
+            <canvas id ='democanvas' width="100" height="50" style="border:1px solid #000000;"><br></canvas>
+        <script>
+            class Rectangle{
+                constructor(longs,width) {
+                    this.longs = longs ;
+                    this.width = width ;
+                    this.area = function () {
+                        return  longs * width;
+                    }
+                    this.perimeter = function () {
+                        return (longs + width)*2;
+                    }
+                }
+                showPerimeter (){
+                    return "<br>"+ "Chiều dài là : " +this.longs + " Chiều rộng là :" + this.width + "<br>" + " Diện tích hình chữ nhật là : "+ this.area() + "<br>" +"Chu vi hình chữ nhật là : "+ this.perimeter()
+                }
+            }
+            let rectangle = new Rectangle(10,5);
+            document.write(rectangle.showPerimeter());
+        </script>
+</body>
+</html>

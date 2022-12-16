@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+        <script>
+            class Temperature {
+                constructor(C) {
+                    this.C = C ;
+                    this.F = function () {
+                        return ( 1.8 * C )+ 32 ;
+                    }
+                    this.Kelvin = function () {
+                        return C + 273.15 ;
+                    }
+                }
+                showInformation () {
+                    return "Nhiệt độ F là :" + this.F() + "℉ ;"+ "<br>" + "Nhiệt độ Kelin là : " + this.Kelvin() + " K " ;
+                }
+            }
+            let temperature = new Temperature(25);
+            document.write(temperature.showInformation());
+        </script>
+</body>
+</html>

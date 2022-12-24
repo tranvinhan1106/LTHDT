@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Công tắc và đèn</title>
+</head>
+<button type="button"id="ct1">Bật đèn</button>
+<button type="button"id="ct2">Tắt đèn</button>
+<body>
+            <script>
+                class Battery{
+                    setEnergy(energy){
+                        this.energy = energy;
+                    }
+             }
+                class FlashLamp{
+                    setBattery(battery){
+                       this.battergy = battery;
+                        }
+                   light(){
+                       if(this.status){
+                          alert("Đèn đang sáng!");
+                     }else{
+                         alert("Đèn đã tắt tắt !");
+                       }
+                  }
+                  turnOn(){
+                     this.status = true;
+                  }
+                  turnOff(){
+                     this.status = false;
+                 }
+             }
+             // Có thể gắn thêm 2 ảnh để hiển thị hình đèn sáng đèn tắt
+             let battery=new Battery();
+             battery.setEnergy(10);
+             let flashLamp=new FlashLamp();
+             flashLamp.setBattery(battery);
+             document.getElementById('ct1').addEventListener('click',() => {
+                 flashLamp.turnOn();
+                 flashLamp.light();
+             })
+             document.getElementById('ct2').addEventListener('click',()=>{
+                 flashLamp.turnOff();
+                    flashLamp.light();
+             })
+            </script>
+</body>
+</html>
